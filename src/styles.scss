@@ -90,7 +90,7 @@ header span{
   transition: all .5s ease;
   text-decoration: none;
 }
-a.active,a:hover{
+.sidebar a.active, .sidebar a:hover{
   border-left: 5px solid #fcdc21;
   color: #fcdc21;
 }

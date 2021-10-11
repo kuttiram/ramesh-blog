@@ -1,12 +1,21 @@
-<nav aria-label="Pagination">
+<nav aria-label="Pagination" >
     <hr class="my-4" />
-    <ul class="pagination justify-content-center my-4">
-        <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a></li>
-        <li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
-        <li class="page-item"><a class="page-link" href="#!">2</a></li>
-        <li class="page-item"><a class="page-link" href="#!">3</a></li>
-        <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
-        <li class="page-item"><a class="page-link" href="#!">15</a></li>
-        <li class="page-item"><a class="page-link" href="#!">Older</a></li>
+     <!-- pager -->
+     <ul *ngIf="postList.pager.pages && postList.pager.pages.length" class="pagination">
+        <li [ngClass]="{disabled:postList.pager.currentPage === 1}">
+            <a (click)="setPage(1)">First</a>
+        </li>
+        <li [ngClass]="{disabled:postList.pager.currentPage === 1}">
+            <a (click)="setPage(postList.pager.currentPage - 1)">Previous</a>
+        </li>
+        <li *ngFor="let page of postList.pager.pages" [ngClass]="{active:postList.pager.currentPage === page}">
+            <a (click)="setPage(page)">{{page}}</a>
+        </li>
+        <li [ngClass]="{disabled:postList.pager.currentPage === postList.pager.totalPages}">
+            <a (click)="setPage(postList.pager.currentPage + 1)">Next</a>
+        </li>
+        <li [ngClass]="{disabled:postList.pager.currentPage === postList.pager.totalPages}">
+            <a (click)="setPage(postList.pager.totalPages)">Last</a>
+        </li>
     </ul>
 </nav>
