@@ -19,12 +19,14 @@ body {
 
 .sidebar{
   position: fixed;
+  z-index: 1;
   top:65px;
   width: 240px;
   left: -240px;
   height: 100%;
   background: #021245;
   transition: all .5s ease;
+  text-decoration: none;
 }
 header{
   position: fixed;
@@ -86,6 +88,7 @@ header span{
   border-left: 5px solid transparent;
   font-family: 'Open Sans', sans-serif;
   transition: all .5s ease;
+  text-decoration: none;
 }
 a.active,a:hover{
   border-left: 5px solid #fcdc21;
@@ -199,7 +202,7 @@ label #cancel{
 }
 .picon:before{
     content: '';
-    background:url('assets/image/icon/popupIcon.png');
+    background:url('assets/images/icon/popupIcon.png');
     background-size:cover;
         position:absolute;
     width:45px;
@@ -209,7 +212,7 @@ label #cancel{
 
 .cicon:before{
     content: '';
-    background:url('assets/image/icon/close-50.png');
+    background:url('assets/images/icon/close-50.png');
     background-size:cover;
     position:absolute;
     width:45px;
@@ -219,7 +222,7 @@ label #cancel{
 
 .licon:before{
     content: '';
-    background:url('assets/image/icon/person-80.png');
+    background:url('assets/images/icon/person-80.png');
     background-size:cover;
     position:absolute;
     width:30px;
@@ -235,7 +238,7 @@ label #cancel{
 }
 .dashicon:before{
 	content: '';
-    background:url('assets/image/icon/dashboard.png');
+    background:url('assets/images/icon/dashboard.png');
     background-size:cover;
         position:absolute;
     width:30px;
@@ -245,7 +248,7 @@ label #cancel{
 
 .linkicon:before{
 	content: '';
-    background:url('assets/image/icon/link-50.png');
+    background:url('assets/images/icon/link-50.png');
     background-size:cover;
         position:absolute;
     width:30px;
@@ -255,7 +258,7 @@ label #cancel{
 
 .overicon:before{
 	content: '';
-    background:url('assets/image/icon/overview-48.png');
+    background:url('assets/images/icon/overview-48.png');
     background-size:cover;
         position:absolute;
     width:30px;
@@ -265,7 +268,7 @@ label #cancel{
 
 .eventicon:before{
 	content: '';
-    background:url('assets/image/icon/event-64.png');
+    background:url('assets/images/icon/event-64.png');
     background-size:cover;
         position:absolute;
     width:30px;
@@ -275,7 +278,7 @@ label #cancel{
 
 .abouticon:before{
 	content: '';
-    background:url('assets/image/icon/about-64.png');
+    background:url('assets/images/icon/about-64.png');
     background-size:cover;
         position:absolute;
     width:30px;
@@ -285,7 +288,7 @@ label #cancel{
 
 .serviceicon:before{
 	content: '';
-    background:url('assets/image/icon/service-64.png');
+    background:url('assets/images/icon/service-64.png');
     background-size:cover;
         position:absolute;
     width:30px;
@@ -295,7 +298,7 @@ label #cancel{
 
 .envelopeicon:before{
 	content: '';
-    background:url('assets/image/icon/envelope-64.png');
+    background:url('assets/images/icon/envelope-64.png');
     background-size:cover;
         position:absolute;
     width:30px;

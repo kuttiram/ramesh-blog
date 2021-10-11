@@ -1,1 +1,9 @@
-<p>big-card works!</p>
+<div class="card">
+    <a href="#!"><img class="card-img-top" src='{{imageUrl}}' alt="{{bannerData.title}}" /></a>
+    <div class="card-body">
+        <div class="small text-muted">{{bannerData.postDate | date:'longDate'}}</div>
+        <h2 class="card-title">{{bannerData.title}}</h2>
+        <p class="card-text">{{bannerData.description}}</p>
+        <a class="btn btn-primary" href="#!">Read more →</a>
+    </div>
+</div>
