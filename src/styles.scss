@@ -1,1 +1,304 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Open+Sans:600&display=swap');
+
+html {
+  height: 100vh;
+}
+
+body {
+  margin: 0 0;
+  padding: 0 0;
+  height: 100%;
+  overflow-y: none;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.sidebar{
+  position: fixed;
+  top:65px;
+  width: 240px;
+  left: -240px;
+  height: 100%;
+  background: #021245;
+  transition: all .5s ease;
+}
+header{
+  position: fixed;
+  font-size: 28px;
+  color: white;
+  line-height: 65px;
+  text-align: left;
+  background: #021245;
+  user-select: none;
+  overflow: auto;
+  width:100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header span{
+	margin-left:30px;
+}
+
+.login a{
+	position: relative;
+	float: right;
+	font-size: 15px;
+	color: white;
+	background: #021245;
+	padding-right:25px;
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
+	transition: all .5s ease;
+	padding-left: 20px;
+}
+
+.login a:hover{
+  border-left: 5px solid #fcdc21;
+  color: #fcdc21;
+}
+
+.login a:after {
+  content: "▼";
+  padding: 2px 0px;
+  position: absolute;
+  right: 15px;
+  top: 0;
+  text-align: right;
+  width: 4px;
+  height: 5px;
+  pointer-events: none;
+}
+
+.sidebar a{
+  display: block;
+  height: 65px;
+  width: 100%;
+  color: white;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  border-left: 5px solid transparent;
+  font-family: 'Open Sans', sans-serif;
+  transition: all .5s ease;
+}
+a.active,a:hover{
+  border-left: 5px solid #fcdc21;
+  color: #fcdc21;
+}
+.sidebar a i{
+  font-size: 23px;
+  margin-right: 16px;
+}
+.sidebar a span{
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-left: 44px;
+}
+
+.rowcell{
+  overflow: auto;
+  position: absolute;
+  top: 70px !important;
+  left: 5px !important;
+  right: 5px !important;
+  bottom: 0 !important;
+  overflow-x: hidden;  
+}
+
+.colflex{
+	height: 100%;
+}
+
+.cactive
+{
+	margin-left:250px;
+}
+
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  top:0px;
+  left: 230px;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #021245;
+  margin: 8px 30px;
+  font-size: 29px;
+  background: #021245;
+  /*height: 45px;
+  width: 45px;*/
+  text-align: center;
+  /*line-height: 45px;*/
+  transition: all .5s ease;
+}
+label #cancel{
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  /*margin-left: 245px;*/
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ label #cancel{
+  /*margin-left: 245px;*/
+  opacity: 1;
+  visibility: visible;
+}
+@media(max-width : 860px){
+  .sidebar{
+    height: auto;
+    width: 70px;
+    left: 0;
+    margin: 100px 0;
+  }
+  header,#btn,#cancel{
+    display: none;
+  }
+  span{
+    position: absolute;
+    margin-left: 23px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .sidebar a{
+    height: 60px;
+  }
+  .sidebar a i{
+    margin-left: -10px;
+  }
+  a:hover {
+    width: 200px;
+    background: inherit;
+  }
+  .sidebar a:hover span{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+/* Don't Forget to Subscribe our Channel[CodingNepal] */
+
+.faicon{
+    /*display:block;
+    background:black;
+    color:white;
+    text-decoration:none;*/
+    padding-left:20px;
+}
+.picon:before{
+    content: '';
+    background:url('assets/image/icon/popupIcon.png');
+    background-size:cover;
+        position:absolute;
+    width:45px;
+    height:45px;
+    margin-left:-20px;
+}
+
+.cicon:before{
+    content: '';
+    background:url('assets/image/icon/close-50.png');
+    background-size:cover;
+    position:absolute;
+    width:45px;
+    height:45px;
+    margin-left:-20px;
+}
+
+.licon:before{
+    content: '';
+    background:url('assets/image/icon/person-80.png');
+    background-size:cover;
+    position:absolute;
+    width:30px;
+    height:30px;
+    margin-left:-34px;
+	margin-top: 18px;
+}
+
+.rticon{
+    text-decoration:none;
+	position: absolute;
+	padding: 16px 18px;
+}
+.dashicon:before{
+	content: '';
+    background:url('assets/image/icon/dashboard.png');
+    background-size:cover;
+        position:absolute;
+    width:30px;
+    height:30px;
+    margin-left:-20px;
+}
+
+.linkicon:before{
+	content: '';
+    background:url('assets/image/icon/link-50.png');
+    background-size:cover;
+        position:absolute;
+    width:30px;
+    height:30px;
+    margin-left:-20px;
+}
+
+.overicon:before{
+	content: '';
+    background:url('assets/image/icon/overview-48.png');
+    background-size:cover;
+        position:absolute;
+    width:30px;
+    height:30px;
+    margin-left:-20px;
+}
+
+.eventicon:before{
+	content: '';
+    background:url('assets/image/icon/event-64.png');
+    background-size:cover;
+        position:absolute;
+    width:30px;
+    height:30px;
+    margin-left:-20px;
+}
+
+.abouticon:before{
+	content: '';
+    background:url('assets/image/icon/about-64.png');
+    background-size:cover;
+        position:absolute;
+    width:30px;
+    height:30px;
+    margin-left:-20px;
+}
+
+.serviceicon:before{
+	content: '';
+    background:url('assets/image/icon/service-64.png');
+    background-size:cover;
+        position:absolute;
+    width:30px;
+    height:30px;
+    margin-left:-20px;
+}
+
+.envelopeicon:before{
+	content: '';
+    background:url('assets/image/icon/envelope-64.png');
+    background-size:cover;
+        position:absolute;
+    width:30px;
+    height:30px;
+    margin-left:-20px;
+}
